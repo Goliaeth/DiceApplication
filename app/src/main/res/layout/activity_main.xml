@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txt_view_random_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -15,12 +16,16 @@
         android:textSize="34sp" />
 
     <Button
+        android:id="@+id/btn_roll_dice"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginTop="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:layout_marginBottom="@dimen/margin_eight"
         android:background="@color/color_button"
         android:text="@string/str_roll"
-        tools:ignore="TextContrastCheck" />
+        android:textColor="#212121" />
 
 </RelativeLayout>
