@@ -6,21 +6,46 @@
     android:background="@color/color_layout_background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/str_one"
-        android:textColor="@color/black"
-        android:textSize="34sp" />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/dice_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/padding_eight"
+            android:contentDescription="@string/str_image_desc_one"
+            android:src="@drawable/dice_empty"
+            tools:src="@drawable/dice5" />
+
+        <ImageView
+            android:id="@+id/dice_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/padding_eight"
+            android:contentDescription="@string/str_image_desc_two"
+            android:src="@drawable/dice_empty"
+            tools:src="@drawable/dice3" />
+
+    </LinearLayout>
 
     <Button
+        android:id="@+id/btn_roll_dice"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginTop="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:layout_marginBottom="@dimen/margin_eight"
         android:background="@color/color_button"
         android:text="@string/str_roll"
-        tools:ignore="TextContrastCheck" />
+        android:textColor="#212121" />
 
 </RelativeLayout>
